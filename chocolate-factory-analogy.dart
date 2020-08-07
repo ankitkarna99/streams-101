@@ -25,6 +25,7 @@ void main() {
   controller.sink.add(order);
 
   controller.stream.map((order) => order.type).transform(baker).listen(
-      (cake) => print("Here's your cake $cake"),
-      onError: (err) => print(err));
+        (cake) => print("Here's your cake $cake"),
+        onError: (err) => print(err),
+      );
 }
